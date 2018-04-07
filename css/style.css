@@ -1,37 +1,75 @@
 
 /*Bootstrap enabled site*/
 /*Override styles below*/
+/* colors */
+/*
+dark brown: rgba(29, 30, 24, 1);
+brown: rgba(80, 59, 49, 1);
+lighter brown: rgba(112, 93, 86, 1);
+blue1: rgba(144, 151, 192, 1);
+blue2: rgba(167, 187, 236, 1);
 
-/*  ocean1.png
-background color #b9c7e1
-light blue #b9c7e1
-dark blue #5b6da0
-White #f9fafd
-white with a litte blue #f4f7fb
-panel color #C4DAF0
+: rgba(43, 65, 98, 1);
+: rgba(244, 250, 255, 1);
+: rgba(115, 130, 144, 1);
+: rgba(77, 80, 97, 1);
+: rgba(255, 255, 255, 1);
+
+greyish
+dark grey: rgba(71, 68, 72, 1);
+purple brown: rgba(45, 35, 46, 1);
+beige: rgba(224, 221, 207, 1);
+grey purple: rgba(83, 75, 82, 1);
+white: rgba(241, 240, 234, 1);
+
+ purpleish
+dark purple: rgba(86, 82, 100, 1);
+lighter purple: rgba(112, 102, 119, 1);
+pink purple: rgba(166, 128, 140, 1);
+light brown: rgba(204, 183, 174, 1);
+grey brown: rgba(214, 207, 203, 1);
 */
-/*   ocean5.png or oceans 5.jpg
-background color #638ec3
-light blue #5da4d1
-dark blue #265998
-extra dark blue for text #023567
-White #dee3f5
-white with a litte blue #bbc8f5
+
+/* FONTS */
+
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Great Vibes', cursive;
+font-family: 'Alex Brush', cursive;
+font-family: 'Amatic SC', cursive;
 */
-/*cell phone  360 X 660 */
+
+/* color variables */
+
+:root {
+  --textcolor: rgba(241, 240, 234, 1);
+  --body-bgcolor: #535657;
+  --nav-text-color: rgba(83, 75, 82, 1);
+  --wrapper-bgcolor: rgba(45, 35, 46, 1);
+  --header-icon-textcolor: rgba(83, 75, 82, 1);
+  --menu-icon-bgcolor: rgba(224, 221, 207, 1);
+
+}
+
+
+
 html  {
   height: 100%;
 }
 body  {
-  background-color: #638ec3;
+  color: var(--textcolor);
+  background-color: var(--body-bgcolor);
   height: 100%;
   width: 100%;
+  font-family: 'Raleway', sans-serif;
 }
-.bkgnd-dark-blue  {
+.jlp-bkgnd {
   border: none;
   background-image: none;
-  background-color: #265998;
-  color: #dee3f5;
+  background-color: var(--menu-icon-bgcolor);
+  /* color: #dee3f5; */
 }
 .see-through  {
   opacity: .8;
@@ -53,29 +91,31 @@ body  {
 }
 
 #wrapper {
-  background: url("../images/ocean5.png") no-repeat center center fixed;
+
+  /* background: url("../images/bkgnd/bkgnd1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: contain cover;
   -o-background-size: contain cover;
-  background-size: contain;
+  background-size: contain; */
+  background-color: var(--wrapper-bgcolor);
   width: 85%;
   border-radius: 0 0 1rem 1rem;
   -webkit-box-shadow: 0 0 6rem rgba(0, 0, 0, 0.7);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    0 0 6rem rgba(0, 0, 0, 0.7);  /* Firefox 3.5 - 3.6 */
   box-shadow:         0 0 6rem rgba(0, 0, 0, 0.7);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
+
+
  /*BOOTSTRAP OVERRIDES*/
-.fa {
-  color: #bbc8f5;
-}
-.page-header h1, .page-header h1 small {
-  font-family: "Espresso";
+
+.page-header h1, .page-header h1 small, .fa {
+  /* font-family: "Espresso"; */
   /*font-weight: 100;*/
-  color: #023567;
+  color: var(--header-icon-textcolor);
 }
-.icon-bar {
-  background-color: #023567;
-}
+/* .icon-bar {
+  background-color: rgba(112, 93, 86, 1);
+} */
  .page-header  {
    border: none;
  }
@@ -87,12 +127,15 @@ body  {
  }
 
  .navbar-default .navbar-toggle .icon-bar {
-   background-color: #023567;
+   /* background-color: rgba(112, 93, 86, 1); */
  }
 
  .navbar-default .navbar-nav>li>a {
-   color: #bbc8f5; /*white with a litte blue*/
+   color: var(--nav-text-color);
 
+ }
+ .panel-default {
+    border: transparent 0px;
  }
  .dropdown-toggle {
    position: relative;
@@ -100,8 +143,7 @@ body  {
  }
 
 .panel  {
-  background-color: #5da4d1;
-  color: #023567; /* xtra dark blue for text */
+  background-color: var(--header-icon-textcolor);
   border: none;
   padding: 2rem 4rem;
   position: relative;
@@ -115,16 +157,80 @@ body  {
    -moz-border-radius: 4px;
    border-radius: 4px;
    padding: 0;
-   -webkit-box-shadow: 1px 1px 3px 0px #636262;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-   -moz-box-shadow:    1px 1px 3px 0px #636262;  /* Firefox 3.5 - 3.6 */
-   box-shadow:         1px 1px 3px 0px #636262;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
- }
+   }
 
  .thumbnail img{
-   -webkit-border-radius: 1rem;
+   -webkit-border-radius: 4px;
    -moz-border-radius: 4px;
-   border-radius: 1rem;
+   border-radius: 4px;
 
+ }
+
+ /* overlay code from travelsomellier */
+ #slideshow	{
+ 	display: flex;
+   flex-wrap: wrap;
+ 	/* position: relative; */
+ 	width: 77%;
+ 	margin: 0 auto;
+ 	/* height: 70%; */
+ }
+ .column {
+   flex: 80%;
+   max-width: 80%;
+ }
+
+ .landscape {
+     float: left;
+     width: 320px;
+     /* height: 320px; */
+     overflow: hidden;
+     /* margin: 15px 0 0 0; */
+     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,12,15,1);
+     -moz-box-shadow: 0px 0px 5px 0px rgba(0,12,15,1);
+     box-shadow: 0px 0px 5px 0px rgba(0,12,15,1);
+ }
+
+ .landscape  img{
+       width: 100%;
+       height: auto;
+   }
+ .image_container	{
+   position: relative;
+   /* margin: 0 2%; */
+ }
+ .image_container:hover img	{
+   transition: 1s;
+   opacity: .3;
+   /* width: 103%; */
+ }
+ .image_container:hover .overlay	{
+   opacity: 1;
+ }
+ .overlay	 {
+   z-index: 999;
+   position: absolute;
+   top: 40%;
+   margin: auto;
+   width: 100%;
+   transition: .5s;
+   opacity: 0;
+ }
+ .overlay:hover	{
+   opacity: 1;
+ }
+ .overlay_text	{
+   text-align: center;
+   font-weight: lighter;
+   font-size: 1.2em;
+   color: #fff;
+   /* font-family: scriptina; */
+ }
+ .no-touch .myClass {
+
+ }
+ .touch .overlay {
+    opacity: 1;
  }
 
  /************* Media queries *****************/
