@@ -1,0 +1,144 @@
+
+/*Bootstrap enabled site*/
+/*Override styles below*/
+
+/*  ocean1.png
+background color #b9c7e1
+light blue #b9c7e1
+dark blue #5b6da0
+White #f9fafd
+white with a litte blue #f4f7fb
+panel color #C4DAF0
+*/
+/*   ocean5.png or oceans 5.jpg
+background color #638ec3
+light blue #5da4d1
+dark blue #265998
+extra dark blue for text #023567
+White #dee3f5
+white with a litte blue #bbc8f5
+*/
+/*cell phone  360 X 660 */
+html  {
+  height: 100%;
+}
+body  {
+  background-color: #638ec3;
+  height: 100%;
+  width: 100%;
+}
+.bkgnd-dark-blue  {
+  border: none;
+  background-image: none;
+  background-color: #265998;
+  color: #dee3f5;
+}
+.see-through  {
+  opacity: .8;
+}
+.left   {
+  position: relative;
+  left: 2rem;
+}
+
+.right   {
+  position: relative;
+  right: 2rem;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 3px 0px #636262;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 3px 0px #636262;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 3px 0px #636262;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+#wrapper {
+  background: url("../images/ocean5.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: contain cover;
+  -o-background-size: contain cover;
+  background-size: contain;
+  width: 85%;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-box-shadow: 0 0 6rem rgba(0, 0, 0, 0.7);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0 0 6rem rgba(0, 0, 0, 0.7);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0 0 6rem rgba(0, 0, 0, 0.7);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+ /*BOOTSTRAP OVERRIDES*/
+.fa {
+  color: #bbc8f5;
+}
+.page-header h1, .page-header h1 small {
+  font-family: "Espresso";
+  /*font-weight: 100;*/
+  color: #023567;
+}
+.icon-bar {
+  background-color: #023567;
+}
+ .page-header  {
+   border: none;
+ }
+
+ .navbar-default .navbar-toggle {
+   border:  none;
+
+
+ }
+
+ .navbar-default .navbar-toggle .icon-bar {
+   background-color: #023567;
+ }
+
+ .navbar-default .navbar-nav>li>a {
+   color: #bbc8f5; /*white with a litte blue*/
+
+ }
+ .dropdown-toggle {
+   position: relative;
+   z-index: 999;
+ }
+
+.panel  {
+  background-color: #5da4d1;
+  color: #023567; /* xtra dark blue for text */
+  border: none;
+  padding: 2rem 4rem;
+  position: relative;
+  z-index: 1;
+
+}
+ .thumbnail {
+   background-color: transparent;
+   border: none;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   padding: 0;
+   -webkit-box-shadow: 1px 1px 3px 0px #636262;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+   -moz-box-shadow:    1px 1px 3px 0px #636262;  /* Firefox 3.5 - 3.6 */
+   box-shadow:         1px 1px 3px 0px #636262;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+ }
+
+ .thumbnail img{
+   -webkit-border-radius: 1rem;
+   -moz-border-radius: 4px;
+   border-radius: 1rem;
+
+ }
+
+ /************* Media queries *****************/
+ @media only screen and (max-width: 560px)  {
+   #owner-tagline  {
+     display: none;
+   }
+ }
+ @media only screen and (max-width: 998px)  {
+   #wrapper {
+
+     -webkit-background-size: cover;
+     -moz-background-size:  cover;
+     -o-background-size:  cover;
+     background-size: cover;
+   }
+ }
