@@ -234,11 +234,24 @@ body  {
  }
 
  /************* Media queries *****************/
+
+ @media screen and (min-width: 1600px) {
+    .landscape {
+        width: 400px;
+        height: 400px;
+      }
+  }
+
  @media only screen and (max-width: 560px)  {
    #owner-tagline  {
      display: none;
    }
+   .landscape {
+       width: 200px;
+       /* height: 240px; */
+     }
  }
+
  @media only screen and (max-width: 998px)  {
    #wrapper {
 
