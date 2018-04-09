@@ -47,9 +47,9 @@ font-family: 'Amatic SC', cursive;
   --textcolor: rgba(241, 240, 234, 1);
   --body-bgcolor: rgba(0, 0, 0, 1);
   --nav-text-color: rgba(83, 75, 82, 1);
-  --wrapper-bgcolor: rgba(5, 4, 17, .8);
+  --wrapper-bgcolor: rgba(17, 28, 33, .90);
   --header-icon-textcolor: rgba(83, 75, 82, 1);
-  --menu-icon-bgcolor: rgba(217, 215, 234, 1);
+  --menu-icon-bgcolor: rgba(127, 196, 226, 1);
 }
 
 html  {
@@ -110,10 +110,13 @@ body  {
 
  /*BOOTSTRAP OVERRIDES*/
 
-.page-header h1, .page-header h1 small {
+.page-header h1, .page-header h3, .page-header h1 small {
   /* font-family: "Espresso"; */
   /*font-weight: 100;*/
  color: var(--textcolor);
+ font-family: 'Merienda', cursive;
+  /* font-family: 'Felipa', cursive; */
+
 }
 .fa {
   color: var(--header-icon-textcolor);
