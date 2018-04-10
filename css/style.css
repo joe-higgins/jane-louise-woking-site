@@ -149,6 +149,7 @@ a {
 } */
  .page-header  {
    border: none;
+   margin: 0;
  }
 .navbar {
   min-height: 10px !important;
