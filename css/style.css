@@ -47,7 +47,7 @@ font-family: 'Amatic SC', cursive;
   --textcolor: rgba(241, 240, 234, 1);
   --body-bgcolor: rgba(0, 0, 0, 1);
   --nav-text-color: rgba(83, 75, 82, 1);
-  --wrapper-bgcolor: rgba(17, 28, 33, .90);
+  --wrapper-bgcolor: rgba(17, 28, 33, .85);
   --header-icon-textcolor: rgba(83, 75, 82, 1);
   --menu-icon-bgcolor: rgba(127, 196, 226, 1);
 }
@@ -58,7 +58,7 @@ html  {
 body  {
   color: var(--textcolor);
   background-color: var(--body-bgcolor);
-  background-image: url("../images/bkgnd/bkgnd3.jpg");
+  background-image: url("../images/bkgnd/bkgnd5.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,6 +101,7 @@ body  {
   background-size: contain; */
   background-color: var(--wrapper-bgcolor);
   width: 85%;
+  min-height: 95%;
   border-radius: 0 0 1rem 1rem;
   -webkit-box-shadow: 0 0 6rem rgba(0, 0, 0, 0.7);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    0 0 6rem rgba(0, 0, 0, 0.7);  /* Firefox 3.5 - 3.6 */
@@ -127,7 +128,9 @@ body  {
  .page-header  {
    border: none;
  }
-
+.navbar {
+  min-height: 10px !important;
+}
  .navbar-default .navbar-toggle {
    border:  none;
 
@@ -140,7 +143,7 @@ body  {
 
  .navbar-default .navbar-nav>li>a {
    color: var(--nav-text-color);
-
+   padding: 5px;
  }
  .panel-default {
     border: transparent 0px;
