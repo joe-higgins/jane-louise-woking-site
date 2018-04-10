@@ -67,6 +67,43 @@ body  {
   width: 100%;
   font-family: 'Raleway', sans-serif;
 }
+a {
+  color: var(--textcolor);
+}
+
+#wrapper {
+
+  /* background: url("../images/bkgnd/bkgnd1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: contain cover;
+  -o-background-size: contain cover;
+  background-size: contain; */
+  background-color: var(--wrapper-bgcolor);
+  width: 85%;
+  min-height: 85vh;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-box-shadow: 0 0 6rem rgba(0, 0, 0, 0.7);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0 0 6rem rgba(0, 0, 0, 0.7);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0 0 6rem rgba(0, 0, 0, 0.7);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+
+#owner  {
+  float: left;
+  width: 40%;
+}
+#owner-tag {
+  /* margin-left: 44%; */
+}
+#nav-right {
+  color: var(--textcolor);
+ float: right;
+  text-align: right;
+  width: 58%;
+  margin-top: 20px;
+  background-color: none;
+}
+
 .jlp-bkgnd {
   border: none;
   background-image: none;
@@ -92,21 +129,6 @@ body  {
   box-shadow:         1px 1px 3px 0px #636262;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-#wrapper {
-
-  /* background: url("../images/bkgnd/bkgnd1.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: contain cover;
-  -o-background-size: contain cover;
-  background-size: contain; */
-  background-color: var(--wrapper-bgcolor);
-  width: 85%;
-  min-height: 95%;
-  border-radius: 0 0 1rem 1rem;
-  -webkit-box-shadow: 0 0 6rem rgba(0, 0, 0, 0.7);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    0 0 6rem rgba(0, 0, 0, 0.7);  /* Firefox 3.5 - 3.6 */
-  box-shadow:         0 0 6rem rgba(0, 0, 0, 0.7);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-}
 
 
  /*BOOTSTRAP OVERRIDES*/
@@ -130,19 +152,27 @@ body  {
  }
 .navbar {
   min-height: 10px !important;
+
+}
+.navbar-header  {
+  color: var(--textcolor);
+  /* background-color: white; */
+}
+.navbar-toggle, .icon-bar {
+   border:1px solid var(--textcolor);
 }
  .navbar-default .navbar-toggle {
    border:  none;
-
-
+   /* background-color: black !important; */
  }
 
  .navbar-default .navbar-toggle .icon-bar {
+   color: white !important;
    /* background-color: rgba(112, 93, 86, 1); */
  }
 
  .navbar-default .navbar-nav>li>a {
-   color: var(--nav-text-color);
+   color: var(--text-color);
    padding: 5px;
  }
  .panel-default {
@@ -189,7 +219,7 @@ body  {
  }
  .column {
    flex: 100%;
-   max-width: 100%;
+   max-width: 80%;
  }
 
  .landscape {
@@ -278,8 +308,20 @@ body  {
       -o-background-size:  cover;
       background-size: cover;
     }
+    #owner-tag {
+      margin-left: 0;
+    }
+  }
+@media only screen and (max-width: 768px)  {
+  #owner  {
+    width: 50%;
   }
 
+  #nav-right  {
+    width: 44%;
+  }
+
+}
 
  @media only screen and (max-width: 560px)  {
    #owner-tagline  {
