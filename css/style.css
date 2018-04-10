@@ -209,9 +209,10 @@ a {
 
  /* overlay code from travelsomellier */
  #slideshow	{
- 	display: flex;
-  flex-wrap: wrap;
+ 	/* display: flex;
+  flex-wrap: wrap; */
  	/* position: relative; */
+  max-width: 800px;
  	width: 100%;
  	margin: auto;
   padding: 5% 0;
@@ -223,8 +224,11 @@ a {
  }
 
  .landscape {
-     float: left;
+     /* float: left; */
+
      width: 100%;
+     margin: auto;
+     /* max-width: 500px; */
      /* height: 320px; */
      overflow: hidden;
      -webkit-box-shadow: 0px 0px 5px 0px rgba(0,12,15,1);
@@ -233,6 +237,7 @@ a {
  }
 
  .landscape  img{
+       max-width: 800px;
        width: 100%;
        height: auto;
    }
