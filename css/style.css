@@ -215,12 +215,12 @@ a {
   max-width: 800px;
  	width: 100%;
  	margin: auto;
-  padding: 5% 0;
+  padding: 1% 0;
  	/* height: 70%; */
  }
  .column {
    flex: 100%;
-   max-width: 80%;
+   max-width: 90%;
  }
 
  .landscape {
