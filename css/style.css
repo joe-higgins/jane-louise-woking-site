@@ -93,7 +93,10 @@ a {
   width: 40%;
 }
 #owner-tag {
-  /* margin-left: 44%; */
+  /* position: relative; */
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 #nav-right {
   color: var(--textcolor);
