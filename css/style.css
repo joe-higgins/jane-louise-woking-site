@@ -55,14 +55,11 @@ font-family: 'Amatic SC', cursive;
 html  {
   height: 100%;
 }
+/* background-image: url("../images/gold-nut-bowl.jpg"); */
 body  {
   color: var(--textcolor);
-  background-color: var(--body-bgcolor);
-  background-image: url("../images/bkgnd/bkgnd5.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--wrapper-bgcolor);
+
   height: 100%;
   width: 100%;
   font-family: 'Raleway', sans-serif;
@@ -73,12 +70,23 @@ a {
 
 #wrapper {
 
-  /* background: url("../images/bkgnd/bkgnd1.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
+  /* background-image: url("../images/gold-nut-bowl.jpg");
+  background-image: url("../images/kelp-boat.jpg");
+  background-image: url("../images/guyette.jpg"); */
+  background-image: url("../images/kelp-boat.jpg");
+  /* background-attachment: fixed;
+  background-position: center;background-image: url("../images/sea-dino-vase.jpg");
+  /* background-attachment: fixed; */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+
+  /* -webkit-background-size: cover;
   -moz-background-size: contain cover;
   -o-background-size: contain cover;
   background-size: contain; */
-  background-color: var(--wrapper-bgcolor);
+  background-color: var(--body-bgcolor);
   width: 85%;
   min-height: 85vh;
   border-radius: 0 0 1rem 1rem;
@@ -87,6 +95,9 @@ a {
   box-shadow:         0 0 6rem rgba(0, 0, 0, 0.7);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
+#header  {
+  background-color: rgba(157, 175, 204, .5);
+}
 
 #owner  {
   float: left;
@@ -135,7 +146,9 @@ a {
 
 
  /*BOOTSTRAP OVERRIDES*/
-
+.container  {
+  padding: 0;
+}
 .page-header h1, .page-header h3, .page-header h1 small {
   /* font-family: "Espresso"; */
   /*font-weight: 100;*/
@@ -298,12 +311,9 @@ a {
       } */
 
   }
-  @media only screen and (max-width: 1344px)  {
-    /* .landscape {
-        width: 180px;
-
-      } */
-
+  @media only screen and (min-width: 1344px)  {
+    #wrapper {
+      background-size: cover;
   }
   @media only screen and (max-width: 998px)  {
     /* .landscape {
@@ -312,16 +322,20 @@ a {
       } */
     #wrapper {
 
-      -webkit-background-size: cover;
+      /* -webkit-background-size: cover;
       -moz-background-size:  cover;
       -o-background-size:  cover;
-      background-size: cover;
+      background-size: cover; */
     }
     #owner-tag {
       margin-left: 0;
     }
   }
 @media only screen and (max-width: 768px)  {
+  /* body {
+    background-image: url("../images/kelp-boat.jpg");
+    background-image: url("../images/guyette.jpg");
+  } */
   #owner  {
     width: 50%;
   }
