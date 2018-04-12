@@ -80,16 +80,20 @@ body::after{
 }
 
 body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2em;
   color: var(--textcolor);
   background-color: var(--body-bgcolor);
-  background-image: url("../images/bkgnd/kelp-boat.png");
-  background-position: top 80px center;
-  background-size: contain;
+  background-image: url("../images/bkgnd/bkgnd5.jpg");
+  background-position: top center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   transition: 2.5s
 }
-
+h1 {
+  font-size: 1.2em;
+}
 #slide-1 {
   background-image: url("../images/bkgnd/green-crystal.jpg");
 }
@@ -100,7 +104,9 @@ body {
 #slide-3 {
   background-image: url("../images/bkgnd/gold-nut-bowl.jpg");
 }
-
+#slide-4  {
+  background-image: url("../images/bkgnd/kelp-boat.png");
+}
 /* END BG SLIDESHOW CODE */
 
 
@@ -120,7 +126,7 @@ a {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
-
+  top: 200px;
 
   /* -webkit-background-size: cover;
   -moz-background-size: contain cover;
@@ -128,6 +134,7 @@ a {
   background-size: contain; */
   background-color: var(--body-bgcolor);
   width: 85%;
+  margin: auto;
   min-height: 85vh;
   border-radius: 0 0 1rem 1rem;
   -webkit-box-shadow: 0 0 6rem rgba(0, 0, 0, 0.7);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -139,15 +146,16 @@ a {
   margin: 0; */
 }
 #header  {
-  background-color: rgba(157, 175, 204, .5);
-  height: 80px;
+  background-color: rgba(157, 175, 204, 0);
+  height: 100px;
 }
 #owner, #owner-tag  {
-  font-family: 'Josefin Sans', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
 }
 #owner  {
   float: left;
   width: 40%;
+  font-size: 2em;
 }
 #owner-tag {
   /* position: relative; */
@@ -163,6 +171,14 @@ a {
   width: 58%;
   margin-top: 20px;
   background-color: none;
+}
+#footer  {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+#footer * {
+  text-align: center;
 }
 
 .jlp-bkgnd {
@@ -353,16 +369,13 @@ a {
         height: 400px;
       }
   } */
-  @media only screen and (max-width: 1544px)  {
-    /* .landscape {
-        width: 260px;
-
-      } */
+  @media only screen and (min-width: 1544px)  {
 
 
   }
   @media only screen and (min-width: 1344px)  {
     body {
+      background-position: top center;
       background-size: cover;
     }
   }
@@ -377,7 +390,7 @@ a {
     }
   }
 @media only screen and (max-width: 768px)  {
-  
+
   #owner  {
     width: 50%;
   }
@@ -389,6 +402,14 @@ a {
 }
 
  @media only screen and (max-width: 560px)  {
+   #owner  {
+     width: 70%;
+   }
+
+   #nav-right  {
+     width: 28%;
+   }
+
    #owner-tag  {
      display: none;
    }
