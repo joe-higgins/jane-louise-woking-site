@@ -17,6 +17,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Amatic+SC|Great+Vibes|Montserrat|Raleway|Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Felipa|Merienda" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Federo" rel="stylesheet">
 
     <!-- Core CSS file -->
     <link rel="stylesheet" href="photswipe/photoswipe.css">
@@ -34,7 +36,7 @@
   </head>
   <body>
 <!--  full width container -->
-  <div id="wrapper" class="container">
+  <div id="wrap---" class="contai---">
 
     <!-- <div class="row jlp-bkgnd">
       <div class="col-xs-4"></div>
@@ -57,7 +59,7 @@
 <!-- END social media links -->
     <div class="page-header" id="header">
         <div id="owner">
-          <h1 id="owner-name" class="text-left">Jane Louise</h1>
+          <h1 id="owner-name" class="text-left">jane louise</h1>
 
         </div>
         <!-- <h1 id="owner-tagline" class="text-center"><small>“HI Super awsome tag line goes here!”</small></h1> -->
@@ -130,8 +132,9 @@
         <!-- END NAV VERTICAL-->
 
         <div class="clearfix"></div>
-        <h3 id="owner-tag" class="text-left">Oceanic Pottery</h3>
+
       </div>
+      <h3 id="owner-tag">Oceanic Pottery</h3>
       <!-- end page-header -->
   <!-- CONTENT -->
 
@@ -288,15 +291,20 @@
 
   </div>
 <!-- END full width container-->
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    <script>
+    function slideshow(interval, frames) {
+      var int = 1;
 
-    <!-- Core JS file -->
-    <script src="photoswipe/photoswipe.min.js"></script>
+      function func() {
+          document.body.id = "slide-"+ int;
+          int++;
+          if(int === frames) { int = 1; }
+      }
 
-    <!-- UI JS file -->
-    <script src="photswipe/photoswipe-ui-default.min.js"></script>
+      var swap = window.setInterval(func, interval);
+    }
+
+    slideshow(5000, 4); //milliseconds, frames
+    </script>
   </body>
 </html>

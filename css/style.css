@@ -39,13 +39,15 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Great Vibes', cursive;
 font-family: 'Alex Brush', cursive;
 font-family: 'Amatic SC', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Federo', sans-serif;
 */
 
 /* color variables */
 
 :root {
   --textcolor: rgba(241, 240, 234, 1);
-  --body-bgcolor: rgba(0, 0, 0, 1);
+  --body-bgcolor: #b7bbba;
   --nav-text-color: rgba(83, 75, 82, 1);
   --wrapper-bgcolor: rgba(17, 28, 33, .85);
   --header-icon-textcolor: rgba(83, 75, 82, 1);
@@ -56,14 +58,52 @@ html  {
   height: 100%;
 }
 /* background-image: url("../images/gold-nut-bowl.jpg"); */
-body  {
+/* body  {
   color: var(--textcolor);
-  background-color: var(--wrapper-bgcolor);
-
+  background-color: var(--body-bgcolor);
+  background-image: url("../images/bkgnd/kelp-boat.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 100%;
   width: 100%;
   font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+} */
+
+/* BACKGROUND IMAGE SLIDESHOW CODE  */
+
+/* preload images */
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url("../images/bkgnd/kelp-boat.png", "../images/bkgnd/green-crystal.jpg", "../images/bkgnd/gold-nut-bowl.png");
 }
+
+body {
+  color: var(--textcolor);
+  background-color: var(--body-bgcolor);
+  background-image: url("../images/bkgnd/kelp-boat.png");
+  background-position: top 80px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: 2.5s
+}
+
+#slide-1 {
+  background-image: url("../images/bkgnd/green-crystal.jpg");
+}
+
+#slide-2 {
+  background-image: url("../images/bkgnd/guyette.jpg");
+}
+#slide-3 {
+  background-image: url("../images/bkgnd/gold-nut-bowl.jpg");
+}
+
+/* END BG SLIDESHOW CODE */
+
+
 a {
   color: var(--textcolor);
 }
@@ -94,11 +134,17 @@ a {
   -moz-box-shadow:    0 0 6rem rgba(0, 0, 0, 0.7);  /* Firefox 3.5 - 3.6 */
   box-shadow:         0 0 6rem rgba(0, 0, 0, 0.7);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
-
+#header * {
+  /* padding: 0;
+  margin: 0; */
+}
 #header  {
   background-color: rgba(157, 175, 204, .5);
+  height: 80px;
 }
-
+#owner, #owner-tag  {
+  font-family: 'Josefin Sans', sans-serif;
+}
 #owner  {
   float: left;
   width: 40%;
@@ -107,8 +153,9 @@ a {
   /* position: relative; */
   text-align: center;
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
+
 #nav-right {
   color: var(--textcolor);
  float: right;
@@ -150,10 +197,12 @@ a {
   padding: 0;
 }
 .page-header h1, .page-header h3, .page-header h1 small {
+
+  padding: 0 5px;
   /* font-family: "Espresso"; */
   /*font-weight: 100;*/
  color: var(--textcolor);
- font-family: 'Merienda', cursive;
+ /* font-family: 'Merienda', cursive; */
   /* font-family: 'Felipa', cursive; */
 
 }
@@ -310,32 +359,25 @@ a {
 
       } */
 
+
   }
   @media only screen and (min-width: 1344px)  {
-    #wrapper {
+    body {
       background-size: cover;
+    }
   }
   @media only screen and (max-width: 998px)  {
     /* .landscape {
         width: 100%;
 
       } */
-    #wrapper {
 
-      /* -webkit-background-size: cover;
-      -moz-background-size:  cover;
-      -o-background-size:  cover;
-      background-size: cover; */
-    }
     #owner-tag {
       margin-left: 0;
     }
   }
 @media only screen and (max-width: 768px)  {
-  /* body {
-    background-image: url("../images/kelp-boat.jpg");
-    background-image: url("../images/guyette.jpg");
-  } */
+  
   #owner  {
     width: 50%;
   }
